@@ -8,13 +8,13 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'src/js/scripts.js',
+                src: 'src/js/*.js',
                 dest: 'dist/js/scripts.min.js'
             }
         },
         cssmin: {
             minify: {
-                src: 'src/css/style.css',
+                src: 'src/css/*.css',
                 dest: 'dist/css/style.min.css'
             }
         },
