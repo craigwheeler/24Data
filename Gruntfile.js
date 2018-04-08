@@ -12,6 +12,18 @@ module.exports = function (grunt) {
                 dest: 'dist/js/scripts.min.js'
             }
         },
+        less: {
+            development: {
+                options: {
+                    compress: true,
+                    yuicompress: true,
+                    optimization: 2
+                },
+                files: {
+                    'src/css/style.css' : 'src/css/less/style.less' // destination file and source file
+                }
+            }
+        },
         cssmin: {
             minify: {
                 src: 'src/css/*.css',
@@ -23,9 +35,12 @@ module.exports = function (grunt) {
                 files: 'src/js/scripts.js',
                 tasks: ['uglify']
             },
-            cssmin: {
-                files: 'src/css/style.css',
-                tasks: ['cssmin']
+            styles: {
+                files: ['src/css/less/*.less', 'src/css/style.css'], // which files to watch
+                tasks: ['less', 'cssmin'],
+                options: {
+                    nospawn: true
+                }
             }
         }
     });
@@ -36,12 +51,14 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     // Load the plugin that provides the "watch" task.
     grunt.loadNpmTasks('grunt-contrib-watch');
+    // Load the plugin that provides the "less" task.
+    grunt.loadNpmTasks('grunt-contrib-less');
 
     // Uglify task
     grunt.registerTask('scripts', ['uglify']);
-    // CSSMin task
-    grunt.registerTask('styles', ['cssmin']);
+    // Less task
+    grunt.registerTask('styles', ['less', 'cssmin']);
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'cssmin', 'watch']);
+    grunt.registerTask('default', ['uglify', 'less', 'cssmin', 'watch']);
 
 };
