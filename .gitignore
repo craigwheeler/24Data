@@ -1,0 +1,20 @@
+# -----------------------------------------------------------------
+# Minimalistic .gitignore for WordPress
+#
+# To ignore uncommitted changes in a file that is already tracked,
+# use `git update-index --assume-unchanged`.
+#
+# To stop tracking a file that is currently tracked,
+# use `git rm --cached`
+#
+# -----------------------------------------------------------------
+
+# ignore temp files
+.npm-debug.log
+tmp
+
+# ignore node modules
+node_modules
+
+# ignore php storm idea files
+*.idea
