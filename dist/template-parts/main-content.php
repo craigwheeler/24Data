@@ -7,23 +7,23 @@
 		<h1>This is the Form</h1>
 		<form>
 			<div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your First Name *">
+				<input type="text" class="form-control" id="inputFirstName" placeholder="Your First Name *" maxlength="20" required>
 			</div>
 			<div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Last Name *">
+				<input type="text" class="form-control" id="inputLastName" placeholder="Your Last Name *" maxlength="20" required>
 			</div>
 			<div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Zip Code *">
+				<input type="text" class="form-control" id="inputZipCode" placeholder="Your Zip Code *" pattern="[0-9]{5}" required>
 			</div>
 			<div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Contact Phone *">
+				<input type="tel" class="form-control" id="inputPhone" placeholder="Contact Phone *" pattern="^[0-9\-\+\s\(\)]*$" required>
 			</div>
 			<div class="form-group">
-				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Your Email *">
+				<input type="email" class="form-control" id="inputEmail" placeholder="Your Email *" required>
 			</div>
 			<div class="checkbox">
 				<label class="disclaimer">
-					<input type="checkbox"> I hereby consent to receive emails, text messages and other electronic communications at the telephone and email listed above.
+					<input type="checkbox" required> I hereby consent to receive emails, text messages and other electronic communications at the telephone and email listed above.
 				</label>
 			</div>
 			<div class="col-sm-offset-3 col-sm-6">
