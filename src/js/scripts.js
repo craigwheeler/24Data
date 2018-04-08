@@ -1,4 +1,3 @@
-
 // validate form data
 function validateForm() {
     // variables
