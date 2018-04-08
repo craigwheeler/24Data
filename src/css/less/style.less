@@ -2,6 +2,7 @@
 @color-primary: #5bb85d;
 @color-white: #fff;
 @color-black: #000;
+@color-red: #f00;
 
 .main-header {
   background-color: @color-primary;
@@ -50,6 +51,16 @@
           background-color: lighten(@color-primary, 15%)
         }
       }
+      #error-message-first-name,
+      #error-message-last-name,
+      #error-message-email,
+      #error-message-phone,
+      #error-message-zipcode,
+      #error-message-checkbox {
+        color: @color-red;
+        font-size: 9px;
+        font-weight: 500;
+      }
     }
   }
 }
@@ -66,3 +77,4 @@
     font-size: 20px;
   }
 }
+
