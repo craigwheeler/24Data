@@ -35,7 +35,7 @@ function validateForm() {
     }
 
     if (!inputZipCode.checkValidity()) {
-        document.getElementById("error-message-zipcode").innerHTML = "Please enter your zip code";
+        document.getElementById("error-message-zipcode").innerHTML = "Please enter your zip code using only numbers";
         zipCode.classList.add("has-error");
     } else if (inputZipCode.checkValidity()) {
         zipCode.classList.remove("has-error");
