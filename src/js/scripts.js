@@ -17,7 +17,7 @@ function validateForm() {
     var email = document.getElementById("email");
 
 
-    // functions
+    // functions created to test input form fields
     if (!inputFirstName.checkValidity()) {
         document.getElementById("error-message-first-name").innerHTML = "Please enter your first name up to 20 characters";
         firstName.classList.add("has-error");
