@@ -1,6 +1,6 @@
 <section class="container main-content">
     <div class="col-sm-offset-1 col-sm-6 icon">
-        <img class="img-responsive" src="wp-content/themes/24data/dist/img/FrontEndSkillsAssessmentIcon.png"
+        <img class="img-responsive" src="wp-content/themes/24Data/dist/img/FrontEndSkillsAssessmentIcon.png"
              alt="icon image">
         <h1>This Icon Has Been Minified</h1>
     </div>
