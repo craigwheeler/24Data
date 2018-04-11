@@ -24,7 +24,7 @@
             </div>
             <div class="form-group" id="phone">
                 <input type="tel" name="phone" class="form-control" id="inputPhone" placeholder="Contact Phone *"
-                       pattern="^[0-9\-\+\s\(\)]*$" required>
+                       pattern="\(\d{3}\)\s\d{3}-\d{4}" required>
                 <p id="error-message-phone"></p>
             </div>
             <div class="form-group" id="email">
