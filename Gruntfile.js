@@ -12,6 +12,25 @@ module.exports = function (grunt) {
                 dest: 'dist/js/scripts.min.js'
             }
         },
+        imagemin: {
+            png: {
+                options: {
+                    optimizationLevel: 7
+                },
+                files: [
+                    {
+                        // Set to true to enable the following options…
+                        expand: true,
+                        // cwd is 'current working directory'
+                        cwd: 'src/img',
+                        src: ['**/*.png'],
+                        // Could also match cwd line above. i.e. project-directory/img/
+                        dest: 'dist/img/compressed/',
+                        ext: '.png'
+                    }
+                ]
+            }
+        },
         less: {
             development: {
                 options: {
@@ -47,18 +66,26 @@ module.exports = function (grunt) {
 
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    // Load the plugin that provides the "cssmin" task.
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    // Load the plugin that provides the "watch" task.
-    grunt.loadNpmTasks('grunt-contrib-watch');
+
     // Load the plugin that provides the "less" task.
     grunt.loadNpmTasks('grunt-contrib-less');
+
+    // Load the plugin that provides the "cssmin" task.
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+
+    // load imagemin plugin
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+
+    // Load the plugin that provides the "watch" task.
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Uglify task
     grunt.registerTask('scripts', ['uglify']);
     // Less task
     grunt.registerTask('styles', ['less', 'cssmin']);
+    // register imagemin task
+    grunt.registerTask('imagepng', ['imagemin:png']);
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'less', 'cssmin', 'watch']);
+    grunt.registerTask('default', ['uglify', 'less', 'cssmin', 'imagemin:png', 'watch']);
 
 };
