@@ -1,4 +1,4 @@
-## Wordpress Boilerplate
+## Wordpress Boilerplate Starter Theme
 
 ### Installation
 
@@ -8,7 +8,7 @@ To run the development install follow the steps outlined below.
 
 ```sh
 $ git clone project
-$ cd 24Data
+$ cd wordpress-starter-theme
 $ npm install
 $ grunt
 ```
