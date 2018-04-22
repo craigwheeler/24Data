@@ -7,7 +7,7 @@ $phoneNum = $_POST['phone'];
 $emailAddress = $_POST['emailaddress'];
 
 //recipient
-$to = 'kimberlys@24datainc.com';
+$to = 'craig@craigwheeler.net';
 
 //email content
 $subject = 'Craig Wheeler SkillsAssessment | Lead Form Submission';
