@@ -1,4 +1,4 @@
-## Front End Developer Skills Assessment
+## Wordpress Boilerplate
 
 ### Installation
 
